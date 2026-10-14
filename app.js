@@ -101,3 +101,4 @@ document.addEventListener("DOMContentLoaded", () => {
     compileBtn.addEventListener("click", executeCompilation);
     downloadBtn.addEventListener("click", triggerAssetDownload);
 });
+    
