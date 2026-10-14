@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C37 QR Matrix Workstation - Free Unlimited Generator</title>
+    
+        <!-- 🎛️ NATIVE HIGH-SPEED QR COMPILER ENGINE -->
+    <script src="https://cloudflare.com" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4vNcpmBAwV44IwDHAF8RbpFJxeYLZfPw9zoJuVupaPSE5wQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- ⚡ MY COMPREHENSIVE INTERACTIVE CONTROLLER LOGIC -->
+    <script src="/app.js"></script>
+
+    <style>
+        :root {
+            --bg-canvas: #0b0f19;     /* Signature C37 Matte Black Skin */
+            --bg-deck: #111625;       /* Premium Space Gray Card Panel */
+            --primary-gold: #D4AF37;  /* High-Vibrancy Polished Metallic Gold */
+            --glow-honey: #f39c12;    /* Interactive Button Glow State */
+            --text-pure: #f8fafc;     /* Crisp High-Contrast Typography */
+            --text-slate: #94a3b8;    /* Professional Informational Gray */
+            --border-line: #1e293b;   /* Low-Contrast Structural Margins */
+            --emerald-safe: #075E54;  /* Trust-Building Deep Verification Green */
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-canvas);
+            color: var(--text-pure);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 32px 16px;
+        }
+
+        /* 👑 WIDE-SCREEN FLUID UTILITY CANVAS CONTAINER */
+        .matrix-shell {
+            width: 100%;
+            max-width: 950px;
+            background: var(--bg-deck);
+            border-radius: 16px;
+            border: 1px solid var(--border-line);
+            padding: 36px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            margin: auto 0;
+        }
+
+        .brand-header-group { text-align: center; margin-bottom: 24px; }
+
+        .brand-emblem-node {
+            display: inline-flex; align-items: center; justify-content: center;
+            border: 2px solid var(--primary-gold); color: var(--primary-gold);
+            font-weight: 800; font-size: 1rem; width: 46px; height: 46px;
+            border-radius: 50%; background: #070a12; margin-bottom: 12px;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+
+        h1 { font-size: 1.8rem; font-weight: 850; letter-spacing: -0.5px; margin-bottom: 6px; }
+        .brand-subtitle { color: var(--text-slate); font-size: 0.95rem; }
+
+        /* 📑 SERVICE SELECTION TAB STRIP MENU */
+        .utility-tab-menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border-line);
+            padding-bottom: 12px;
+        }
+
+        .tab-valve {
+            padding: 10px 20px;
+            background: #070a12;
+            border: 1px solid var(--border-line);
+            border-radius: 6px;
+            color: var(--text-slate);
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .tab-valve:hover, .tab-valve.active-tab {
+            border-color: var(--primary-gold);
+            color: var(--primary-gold);
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        /* 📡 DUAL-COLUMN WORKSPACE SPLIT PANEL */
+        .split-grid-panel {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .split-grid-panel { grid-template-columns: 1fr; gap: 24px; }
+        }
+
+        .control-form-pane { display: flex; flex-direction: column; }
+        .terminal-group-row { margin-bottom: 20px; text-align: left; }
+        .terminal-group-row label { display: block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--primary-gold); margin-bottom: 8px; }
+        
+        .data-input-terminal {
+            width: 100%; padding: 14px 16px; background: #060911;
+            border: 1px solid var(--border-line); border-radius: 8px;
+            color: var(--text-pure); font-size: 0.95rem; outline: none;
+            font-family: inherit;
+        }
+        .data-input-terminal:focus { border-color: var(--primary-gold); }
+
+        textarea.data-input-terminal {
+            resize: vertical;
+            min-height: 220px;
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+
+        .service-panel-content { display: none; }
+        .service-panel-content.active-panel { display: block; }
+
+        /* Real-Time Local Pixel Rendering Dock */
+        .vector-render-dock {
+            width: 100%; min-height: 280px; background: #ffffff;
+            border-radius: 12px; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; padding: 24px;
+        }
+
+        #qrcode-canvas-target { padding: 10px; background: #ffffff; }
+
+        /* ⚡ CLEAN ACTION VALVES */
+        .valve-btn {
+            width: 100%; padding: 15px; background: var(--primary-gold);
+            color: #0b0f19; border: none; border-radius: 8px;
+            font-size: 0.95rem; font-weight: 800; cursor: pointer;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            letter-spacing: 0.3px;
+        }
+        .valve-btn:hover { background: var(--glow-honey); color: #ffffff; }
+        .valve-btn-success { background: var(--emerald-safe); color: #ffffff; margin-top: 14px; }
+
+        .corporate-footer { width: 100%; max-width: 950px; margin-top: 40px; border-top: 1px solid var(--border-line); padding-top: 20px; text-align: center; }
+        .footer-nav-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; list-style: none; margin-bottom: 12px; }
+        .footer-nav-links a { color: var(--text-slate); text-decoration: none; font-size: 0.8rem; font-weight: 600; }
+        .footer-nav-links a:hover { color: var(--primary-gold); }
+        .copyright-text { font-size: 0.75rem; color: var(--text-slate); }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <div class="matrix-shell">
+        <header class="brand-header-group">
+            <div class="brand-emblem-node">C37</div>
+            <h1>QR <span style="color: var(--primary-gold);">Matrix</span> Workstation</h1>
+            <p class="brand-subtitle">Free Unlimited QR Code Generator • High-Density Outputs</p>
+        </header>
+
+        <!-- 📑 SERVICE TABS MENU -->
+        <div class="utility-tab-menu">
+            <button class="tab-valve active-tab" onclick="switchUtilityTab('link-panel', this)">🔗 WEBSITE / LINK</button>
+            <button class="tab-valve" onclick="switchUtilityTab('text-panel', this)">📝 PLAIN TEXT</button>
+            <button class="tab-valve" onclick="switchUtilityTab('wifi-panel', this)">📡 WI-FI NETWORK</button>
+        </div>
+
+        <div class="split-grid-panel">
+            
+            <!-- Left Side: Simple Inputs Area -->
+            <div class="control-form-pane">
+                
+                <!-- PANEL 1: LINK INTERFACE -->
+                <div id="link-panel" class="service-panel-content active-panel">
+                    <div class="terminal-group-row">
+                        <label>Enter Web Link Address</label>
+                        <input type="text" id="link-url-input" class="data-input-terminal" placeholder="Paste link here (e.g., https://onrender.com)">
+                    </div>
+                </div>
+
+                <!-- PANEL 2: TEXT INTERFACE (UPGRADED TO TEXTAREA FOR LONG PARAGRAPHS) -->
+                <div id="text-panel" class="service-panel-content">
+                    <div class="terminal-group-row">
+                        <label>Enter Your Text Notes</label>
+                        <textarea id="text-raw-input" class="data-input-terminal" placeholder="Type or paste long study notes, assignment summaries, or paragraphs here..."></textarea>
+                    </div>
+                </div>
+
+                <!-- PANEL 3: WI-FI INTERFACE -->
+                <div id="wifi-panel" class="service-panel-content">
+                    <div class="terminal-group-row">
+                        <label>Wi-Fi Network Name (SSID)</label>
+                        <input type="text" id="wifi-ssid" class="data-input-terminal" placeholder="Enter network name here...">
+                    </div>
+                    <div class="terminal-group-row">
+                        <label>Wi-Fi Password</label>
+                        <input type="text" id="wifi-password" class="data-input-terminal" placeholder="Enter network password here...">
+                    </div>
+                </div>
+                
+                <!-- ⚡ CTA BUTTONS LINKED DIRECTLY TO MY CONTROLLER ID HOOKS -->
+                <button id="compile-matrix-trigger" class="valve-btn" style="margin-top: 10px;">⚡ CREATE QR CODE</button>
+                <button id="download-asset-trigger" class="valve-btn valve-btn-success">📥 SAVE AS IMAGE (PNG)</button>
+            </div>
+
+            <!-- Right Side: Pixel Visual Result Box -->
+            <div class="vector-render-dock">
+                <div id="qrcode-canvas-target"></div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Institutional Brand Footer Links -->
+    <footer class="corporate-footer">
+        <ul class="footer-nav-links">
+            <li><a href="legal.html#about">About Platform</a></li>
+            <li><a href="legal.html#terms">Terms of Service</a></li>
+            <li><a href="legal.html#privacy">Privacy Policy</a></li>
+            <li><a href="legal.html#dmca">DMCA Protection</a></li>
+            <li><a href="legal.html#support">Support Desk</a></li>
+        </ul>
+        <p class="copyright-text">© 2026 C37 SmartLabs Framework Tier. Engineered for unrestricted public utility mapping.</p>
+    </footer>
+
+    <!-- Local JavaScript Engine Attachment Row -->
+    <script src="app.js"></script>
+</body>
+</html>
