@@ -1,5 +1,5 @@
 // ===================================================================
-// 🛰️ C37 SMARTLABS: INTERACTIVE COMPILATION LOGIC CONTROLLER
+// 🛰️ C37 SMARTLABS: MULTI-SERVICE QR VECTOR COMPILATION ENGINE
 // ===================================================================
 
 // Global helper function to switch interface panels instantly
@@ -15,13 +15,14 @@ function switchUtilityTab(targetPanelId, selectedTabButton) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    // 📡 SELECTING ALL MY ACTIVE TERMINAL INTERFACE ACTION BUTTONS
     const compileBtn = document.getElementById("compile-matrix-trigger");
     const downloadBtn = document.getElementById("download-asset-trigger");
     const canvasDeck = document.getElementById("qrcode-canvas-target");
 
     let myQrMatrix = null;
 
-    // Automatically load up a default clean QR block right upon page load
+    // Automatically load up a default clean QR block right upon initial page view loading
     myQrMatrix = new QRCode(canvasDeck, {
         text: "https://onrender.com",
         width: 240, height: 240,
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /**
-     * ⚡ MY DATA COLLECTION & GENERATION PROCESSOR
+     * ⚡ MY DYNAMIC DATA COLLECTION & GENERATION PROCESSOR
      * Captures data from fields and triggers high-speed pixel mapping
      */
     function executeCompilation() {
