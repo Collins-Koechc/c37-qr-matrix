@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Construct an anchor node link block to download the graphic file asset instantly
             const virtualAnchorNode = document.createElement("a");
             virtualAnchorNode.href = canvasDataStream;
-            virtualAnchorNode.download = `C37_WORKSTATION_QR_${Date.now()}.png`;
+            virtualAnchorNode.download = `C37_QR_Matrix_Hub_${Date.now()}.png`;
             
             document.body.appendChild(virtualAnchorNode);
             virtualAnchorNode.click();
