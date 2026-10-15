@@ -7,29 +7,59 @@
     
     
     <style>
-        :root {
-            --bg-canvas: #0b0f19;     /* Signature C37 Matte Black Skin */
-            --bg-deck: #111625;       /* Premium Space Gray Card Panel */
-            --primary-gold: #D4AF37;  /* High-Vibrancy Polished Metallic Gold */
-            --glow-honey: #f39c12;    /* Interactive Button Glow State */
-            --text-pure: #f8fafc;     /* Crisp High-Contrast Typography */
-            --text-slate: #94a3b8;    /* Professional Informational Gray */
-            --border-line: #1e293b;   /* Low-Contrast Structural Margins */
-            --emerald-safe: #075E54;  /* Trust-Building Deep Verification Green */
+                :root {
+            --bg-deep: #03050a;       /* Ultra-Deep International Luxury SaaS Matte Black */
+            --bg-card: #090d16;       /* Premium Dark Slate Metallic Dashboard Grid Deck */
+            --primary-gold: #D4AF37;  /* Mirror-Polished High-Vibrancy Gold Accents */
+            --glow-honey: #e67e22;    /* Interactive Button Focus Amber Glow State */
+            --text-pure: #f8fafc;     /* Crisp High-Contrast Diamond White Typography */
+            --text-slate: #64748b;    /* High-End Technical Informational Slate Gray */
+            --border-line: #1e293b;   /* Thin Low-Contrast Structural Layout Margin Line */
+            --emerald-safe: #054c32;  /* Deep Institutional M-Pesa Style Trust Green */
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        /* 👑 HIGH-DENSITY FLUID BODY WITH ZERO DEAD CORNER MARGINS */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-canvas);
+            background-color: var(--bg-deep);
             color: var(--text-pure);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            padding: 32px 16px;
+            /* Ultra-tight responsive spatial packing to kill all ugly empty spacing gaps */
+            padding: 16px; 
+            overflow-x: hidden;
+        }
+
+        /* 🏆 PREMIUM METALLIC GLASS dashboard WRAPPER CONSOLE Shell */
+        .matrix-shell {
+            width: 100%;
+            max-width: 960px;
+            background: linear-gradient(135deg, var(--bg-card), #050710);
+            border: 1px solid var(--border-line);
+            border-radius: 12px;
+            padding: 24px; /* Optimized tight internal breathing room */
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 
+                        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+            margin: auto 0;
+            position: relative;
+        }
+
+        /* Thin neon micro-border edge layout pipeline accent */
+        .matrix-shell::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+            border-radius: 12px 12px 0 0;
         }
 
         /* 👑 WIDE-SCREEN FLUID UTILITY CANVAS CONTAINER */
@@ -43,48 +73,93 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
             margin: auto 0;
         }
-
-        .brand-header-group { text-align: center; margin-bottom: 24px; }
-
-        .brand-emblem-node {
-            display: inline-flex; align-items: center; justify-content: center;
-            border: 2px solid var(--primary-gold); color: var(--primary-gold);
-            font-weight: 800; font-size: 1rem; width: 46px; height: 46px;
-            border-radius: 50%; background: #070a12; margin-bottom: 12px;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        /* 👑 HIGH-DENSITY BRAND ARCHITECTURE HEADER HEADER GRID */
+        .brand-header-group { 
+            text-align: center; 
+            margin-bottom: 24px; 
+            border-bottom: 1px solid var(--border-line);
+            padding-bottom: 20px;
         }
 
-        h1 { font-size: 1.8rem; font-weight: 850; letter-spacing: -0.5px; margin-bottom: 6px; }
-        .brand-subtitle { color: var(--text-slate); font-size: 0.95rem; }
+        /* Sovereign circular brand core node token icon */
+        .brand-emblem-node {
+            display: inline-flex; align-items: center; justify-content: center;
+            border: 1px solid var(--primary-gold); color: var(--primary-gold);
+            font-family: inherit; font-weight: 900; font-size: 0.82rem; 
+            letter-spacing: 1px; width: 44px; height: 44px;
+            border-radius: 50%; background: #020409; margin-bottom: 12px;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.12),
+                        inset 0 0 8px rgba(212, 175, 55, 0.05);
+        }
 
-        /* 📑 SERVICE SELECTION TAB STRIP MENU */
+        .brand-header-group h1 { 
+            font-size: 1.65rem; 
+            font-weight: 850; 
+            letter-spacing: -0.03em; 
+            color: var(--text-pure);
+            margin-bottom: 4px; 
+        }
+        
+        .brand-subtitle { 
+            color: var(--text-slate); 
+            font-size: 0.88rem; 
+            letter-spacing: 0.01em;
+            font-weight: 500;
+        }
+
+    
+                /* 📑 SERVICE SELECTION TAB STRIP BLOCK ARCHITECTURE */
+                /* 📑 SERVICE SELECTION TAB STRIP BLOCK ARCHITECTURE - MOBILE WRAP PATCH */
         .utility-tab-menu {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 24px;
-            border-bottom: 1px solid var(--border-line);
-            padding-bottom: 12px;
+            flex-wrap: wrap; /* Triggers automated row stacking on compact screens */
+            gap: 8px;
+            margin-bottom: 28px;
+            background: #020409;
+            padding: 6px;
+            border-radius: 8px;
+            border: 1px solid var(--border-line);
+            width: 100%;
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 480px) {
+            .utility-tab-menu {
+                max-width: 100%; /* Spreads fluidly on compact smartphone margins */
+                gap: 6px;
+            }
+            .tab-valve {
+                flex: 1 1 calc(50% - 6px); /* Perfectly aligns buttons into a balanced 2x2 grid */
+                font-size: 0.76rem;
+                padding: 10px 8px;
+                text-align: center;
+            }
         }
 
         .tab-valve {
-            padding: 10px 20px;
-            background: #070a12;
-            border: 1px solid var(--border-line);
+            padding: 8px 16px;
+            background: transparent;
+            border: none;
             border-radius: 6px;
             color: var(--text-slate);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             cursor: pointer;
-            transition: all 0.15s ease;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
+        /* Pure corporate focus states with zero bloated borders */
         .tab-valve:hover, .tab-valve.active-tab {
-            border-color: var(--primary-gold);
             color: var(--primary-gold);
-            background: rgba(212, 175, 55, 0.05);
+            background: rgba(212, 175, 55, 0.08);
+            box-shadow: inset 0 0 0 1px rgba(212, 175, 55, 0.15);
         }
+
 
         /* 📡 DUAL-COLUMN WORKSPACE SPLIT PANEL */
         .split-grid-panel {
@@ -148,55 +223,56 @@
     <div></div>
 
     <div class="matrix-shell">
+              <!-- Global Enterprise Brand Front-Face Header System -->
         <header class="brand-header-group">
             <div class="brand-emblem-node">C37</div>
-            <h1>QR <span style="color: var(--primary-gold);">Matrix</span> Workstation</h1>
-            <p class="brand-subtitle">Free Unlimited QR Code Generator • High-Density Outputs</p>
+            <h1>QR <span style="color: var(--primary-gold);">Matrix</span> Hub</h1>
+            <p class="brand-subtitle"> Welcome to free,Standalone Utility Workstation • Unrestricted Client-Side Data Matrix Encryption .Free Qr code,website link,infor/text to qr,free wifi qr code</p>
         </header>
 
         <!-- 📑 SERVICE TABS MENU -->
+               <!-- High-Density Multi-Service Operational Navigation Core -->
         <div class="utility-tab-menu">
-            <button class="tab-valve active-tab" onclick="switchUtilityTab('link-panel', this)">🔗 WEBSITE / LINK</button>
-            <button class="tab-valve" onclick="switchUtilityTab('text-panel', this)">📝 PLAIN TEXT</button>
-            <button class="tab-valve" onclick="switchUtilityTab('wifi-panel', this)">📡 WI-FI NETWORK</button>
+            <button class="tab-valve active-tab" onclick="switchUtilityTab('link-panel', this)">🔗 Website Destination</button>
+            <button class="tab-valve" onclick="switchUtilityTab('text-panel', this)">📝Text/ Alphanumeric Matrix</button>
+            <button class="tab-valve" onclick="switchUtilityTab('wifi-panel', this)">📡 wi-fi/ Wireless Provisioning</button>
         </div>
-
         <div class="split-grid-panel">
             
-            <!-- Left Side: Simple Inputs Area -->
+            <!-- Left Side Column Panel Box: Input Management Form Node -->
             <div class="control-form-pane">
                 
                 <!-- PANEL 1: LINK INTERFACE -->
                 <div id="link-panel" class="service-panel-content active-panel">
                     <div class="terminal-group-row">
-                        <label>Enter Web Link Address</label>
-                        <input type="text" id="link-url-input" class="data-input-terminal" placeholder="Paste link here (e.g., https://onrender.com)">
+                        <label>Target Web Address Destination URL</label>
+                        <input type="text" id="link-url-input" class="data-input-terminal" placeholder="Paste link target here (e.g., https://onrender.com)">
                     </div>
                 </div>
 
                 <!-- PANEL 2: TEXT INTERFACE (UPGRADED TO TEXTAREA FOR LONG PARAGRAPHS) -->
                 <div id="text-panel" class="service-panel-content">
                     <div class="terminal-group-row">
-                        <label>Enter Your Text Notes</label>
-                        <textarea id="text-raw-input" class="data-input-terminal" placeholder="Type or paste long study notes, assignment summaries, or paragraphs here..."></textarea>
+                        <label>Raw Content Block Notes / Paragraph Summaries</label>
+                        <textarea id="text-raw-input" class="data-input-terminal" placeholder="Paste long alphanumeric data strings, encryption blocks, or text notes here..."></textarea>
                     </div>
                 </div>
 
                 <!-- PANEL 3: WI-FI INTERFACE -->
                 <div id="wifi-panel" class="service-panel-content">
                     <div class="terminal-group-row">
-                        <label>Wi-Fi Network Name (SSID)</label>
-                        <input type="text" id="wifi-ssid" class="data-input-terminal" placeholder="Enter network name here...">
+                        <label>Wi-Fi Network SSID Name</label>
+                        <input type="text" id="wifi-ssid" class="data-input-terminal" placeholder="Enter network name profile here...">
                     </div>
                     <div class="terminal-group-row">
-                        <label>Wi-Fi Password</label>
-                        <input type="text" id="wifi-password" class="data-input-terminal" placeholder="Enter network password here...">
+                        <label>Network Key Password</label>
+                        <input type="text" id="wifi-password" class="data-input-terminal" placeholder="Enter wireless security passcode string...">
                     </div>
                 </div>
                 
-                <!-- ⚡ CTA BUTTONS LINKED DIRECTLY TO MY CONTROLLER ID HOOKS -->
-                <button id="compile-matrix-trigger" class="valve-btn" style="margin-top: 10px;">⚡ CREATE QR CODE</button>
-                <button id="download-asset-trigger" class="valve-btn valve-btn-success">📥 SAVE AS IMAGE (PNG)</button>
+                <!-- ⚡ CTA BUTTON VALVE PORTS MATCHING SCRIPT HOOKS -->
+                <button id="compile-matrix-trigger" class="valve-btn" style="margin-top: 10px;">⚡ Create QR Code</button>
+                <button id="download-asset-trigger" class="valve-btn valve-btn-success">📥 Save As Image (PNG)</button>
             </div>
 
             <!-- Right Side: Pixel Visual Result Box -->

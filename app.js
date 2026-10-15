@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Automatically load up a default clean QR block right upon initial page view loading
     myQrMatrix = new QRCode(canvasDeck, {
-        text: "https://onrender.com",
+        text: "https://myweb.com.....",
         width: 240, height: 240,
         colorDark: "#0b0f19", colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (!compiledPayloadString) {
-            alert("❌ CoreVault Notice: Please populate your target data field parameters first!");
+            alert("❌ QR Matrix System Notice!: Please populate your target data field parameters first!");
             return;
         }
 
