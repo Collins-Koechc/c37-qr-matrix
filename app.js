@@ -70,34 +70,48 @@ document.addEventListener("DOMContentLoaded", () => {
      * 📥 CLEAN CANVAS FILE EXPORT VALVE
      * Extracts client-side base64 stream links to allow 100% offline file downloads
      */
-    function triggerAssetDownload() {
-        // Target the native HTML5 Canvas block compiled inside our library container
-        const targetCanvasElement = canvasDeck.querySelector("canvas");
-        
-        if (!targetCanvasElement) {
-            alert("❌ Extraction Failure: Please create your QR code layout first!");
-            return;
-        }
+   function triggerAssetDownload() {
+    // Target the native HTML5 Canvas block compiled inside our library container
+    const targetCanvasElement = canvasDeck.querySelector("canvas");
 
-        try {
-            // Extract pure base64 raw data URL image parameters from the active canvas matrix
-            const canvasDataStream = targetCanvasElement.toDataURL("image/png");
-
-            // Construct an anchor node link block to download the graphic file asset instantly
-            const virtualAnchorNode = document.createElement("a");
-            virtualAnchorNode.href = canvasDataStream;
-            virtualAnchorNode.download = `C37_QR_Matrix_Hub_${Date.now()}.png`;
-            
-            document.body.appendChild(virtualAnchorNode);
-            virtualAnchorNode.click();
-            document.body.removeChild(virtualAnchorNode);
-
-        } catch (downloadCrashError) {
-            console.error("🚨 Download Engine exception handled:", downloadCrashError);
-            alert("❌ Extraction Error: Browser blocked offline file storage streams.");
-        }
+    if (!targetCanvasElement) {
+        alert("❌ Extraction Failure: Please create your QR code layout first!");
+        return;
     }
 
+    try {
+        // Create an off-screen canvas to add a solid white background layer
+        const exportCanvas = document.createElement("canvas");
+        const exportContext = exportCanvas.getContext("2d");
+
+        const padding = 16;
+        exportCanvas.width = targetCanvasElement.width + (padding * 2);
+        exportCanvas.height = targetCanvasElement.height + (padding * 2);
+
+        // Fill background white so it never saves with a black background
+        exportContext.fillStyle = "#FFFFFF";
+        exportContext.fillRect(0, 0, exportCanvas.width, exportCanvas.height);
+
+        // Draw your original QR code on top of the white background
+        exportContext.drawImage(targetCanvasElement, padding, padding);
+
+        // Extract pure base64 raw data URL image parameters from the new white canvas
+        const canvasDataStream = exportCanvas.toDataURL("image/png");
+
+        // Construct an anchor node link block to download the graphic file asset instantly
+        const virtualAnchorNode = document.createElement("a");
+        virtualAnchorNode.href = canvasDataStream;
+        virtualAnchorNode.download = `C37_QR_Matrix_Hub_${Date.now()}.png`;
+
+        document.body.appendChild(virtualAnchorNode);
+        virtualAnchorNode.click();
+        document.body.removeChild(virtualAnchorNode);
+
+    } catch (downloadCrashError) {
+        console.error("🚨 Download Engine exception handled:", downloadCrashError);
+        alert("❌ Extraction Error: Browser blocked offline file storage streams.");
+    }
+}
     compileBtn.addEventListener("click", executeCompilation);
     downloadBtn.addEventListener("click", triggerAssetDownload);
 });

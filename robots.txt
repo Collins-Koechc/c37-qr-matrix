@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://c37qrmatrix.onrender.com/sitemap.xml
